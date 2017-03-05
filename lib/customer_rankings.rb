@@ -42,6 +42,10 @@ module CustomerRankings
     "#{propensity_rating} It is #{propensity_score} and the desired score is #{desired_propensity}. The difference is #{score_difference}."
   end 
 
+  def ranking_score(score)
+    score["ranking"]
+  end 
+
 end
 
 
