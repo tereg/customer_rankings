@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["tereg"]
   spec.email         = ["teregalla@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Propensity and ranking rater}
+  spec.description   = %q{A library used to determine if an applicant's propensity and ranking are above average, average, or below average.}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
