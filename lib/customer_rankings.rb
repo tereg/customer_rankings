@@ -46,6 +46,18 @@ module CustomerRankings
     score["ranking"]
   end 
 
+  def ranking_rating(desired_ranking, ranking_score)
+    ranking_score = ranking_score(ranking_score)
+
+    if ranking_score == desired_ranking
+      "The applicant's ranking score is average."
+    elsif ranking_score < desired_ranking
+      "The applicant's ranking score is above average."
+    else
+      "The applicant's ranking score is below average."
+    end 
+  end 
+
 end
 
 
