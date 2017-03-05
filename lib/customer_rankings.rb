@@ -58,6 +58,15 @@ module CustomerRankings
     end 
   end 
 
+  def overall_summary(desired_propensity, desired_ranking, score)
+    propensity_score = propensity_score(score)
+    ranking_score = ranking_score(score)
+    propensity_rating = (propensity_rating(desired_propensity, score)).chop
+    score_difference = score_difference(desired_propensity, score)
+    ranking_rating = (ranking_rating(desired_ranking, score)).downcase.gsub("applicant's ", "")
+
+    "#{propensity_rating}, and #{ranking_rating} The propensity score is #{propensity_score} and the desired score is #{desired_propensity}. The difference is #{score_difference}. The ranking score is #{ranking_score}, and the desired ranking is #{desired_ranking}."
+  end 
 end
 
 

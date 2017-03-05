@@ -88,7 +88,7 @@ describe CustomerRankings do
   describe '#overall_summary' do 
     context "when applicant's propensity score and ranking are both average" do
       it "gives a summary which says both scores are average" do 
-        expect(overall_summary(desired_propensity_1, desired_ranking_1, score_1)).to eq("The applicant's propensity score is average, and the ranking score is average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0. The ranking score is C, and the desired ranking is C.")
+        expect(overall_summary(desired_propensity_1, desired_ranking_1, score_1)).to eq("The applicant's propensity score is average, and the ranking score is average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0.0. The ranking score is C, and the desired ranking is C.")
       end 
      end  
 
@@ -106,19 +106,19 @@ describe CustomerRankings do
 
     context "when applicant's propensity score is average and ranking score is below average" do
       it "gives a summary which says propensity score is average and ranking score is below average" do 
-        expect(overall_summary(desired_propensity_1, desired_ranking_2, score_1)).to eq("The applicant's propensity score is average, and the ranking score is below average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0. The ranking score is C, and the desired ranking is A.")
+        expect(overall_summary(desired_propensity_1, desired_ranking_2, score_1)).to eq("The applicant's propensity score is average, and the ranking score is below average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0.0. The ranking score is C, and the desired ranking is A.")
       end 
     end
 
     context "when applicant's propensity score is average and ranking score is above average" do
       it "gives a summary which says propensity score is average and ranking score is above average" do 
-        expect(overall_summary(desired_propensity_1, desired_ranking_2, score_1)).to eq("The applicant's propensity score is average, and the ranking score is below average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0. The ranking score is C, and the desired ranking is A.")
+        expect(overall_summary(desired_propensity_1, desired_ranking_2, score_1)).to eq("The applicant's propensity score is average, and the ranking score is below average. The propensity score is 0.26532 and the desired score is 0.26532. The difference is 0.0. The ranking score is C, and the desired ranking is A.")
       end 
     end
 
     context "when applicant's propensity score is below average and ranking score is  average" do
       it "gives a summary which says propensity score is below average and ranking score is average" do 
-        expect(overall_summary(desired_propensity_2, desired_ranking_1, score_1)).to eq("The applicant's propensity score is below average, and the ranking score is average. The propensity score is 0.26532 and the desired score is 0.40030. The difference is 0.13498. The ranking score is C, and the desired ranking is C.")
+        expect(overall_summary(desired_propensity_2, desired_ranking_1, score_1)).to eq("The applicant's propensity score is below average, and the ranking score is average. The propensity score is 0.26532 and the desired score is 0.4003. The difference is 0.13498. The ranking score is C, and the desired ranking is C.")
       end 
     end
   end 
