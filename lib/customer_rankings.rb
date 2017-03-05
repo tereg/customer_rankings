@@ -34,6 +34,9 @@ module CustomerRankings
     desired_propensity - propensity_score 
   end 
 
+  def propensity_rating_summary
+  end 
+
 end
 
 
