@@ -14,6 +14,10 @@ module CustomerRankings
     response.parsed_response
   end 
 
+  def propensity_score(score)
+    score["propensity"]
+  end 
+
 end
 
 
