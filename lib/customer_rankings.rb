@@ -29,6 +29,11 @@ module CustomerRankings
     end 
   end 
 
+  def score_difference(desired_propensity, score)
+    propensity_score = propensity_score(score)
+    desired_propensity - propensity_score 
+  end 
+
 end
 
 
