@@ -18,6 +18,13 @@ module CustomerRankings
     score["propensity"]
   end 
 
+  def propensity_rating(desired_propensity, score)
+    if desired_propensity == propensity_score(score)
+      p "The applicant's propensity score is average."
+    end
+
+  end 
+
 end
 
 
