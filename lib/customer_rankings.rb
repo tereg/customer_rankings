@@ -34,7 +34,12 @@ module CustomerRankings
     desired_propensity - propensity_score 
   end 
 
-  def propensity_rating_summary
+  def propensity_rating_summary(desired_propensity, score)
+    propensity_score = propensity_score(score)
+    propensity_rating = propensity_rating(desired_propensity, score)
+    score_difference = score_difference(desired_propensity, score)
+
+    "#{propensity_rating} It is #{propensity_score} and the desired score is #{desired_propensity}. The difference is #{score_difference}."
   end 
 
 end

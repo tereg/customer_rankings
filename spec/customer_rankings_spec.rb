@@ -50,7 +50,7 @@ describe CustomerRankings do
 
   describe '#propensity_rating_summary' do
     it "returns a summary which includes propensity score, rating, and score difference" do 
-      expect(propensity_rating_summary(desired_propensity_1, score_1)).to eq("The applicant's propensity score is average. It is 0.26532 and the desired score is 0.26532. The difference is 0.")
+      expect(propensity_rating_summary(desired_propensity_1, score_1)).to eq("The applicant's propensity score is average. It is 0.26532 and the desired score is 0.26532. The difference is 0.0.")
       expect(propensity_rating_summary(desired_propensity_1, score_2)).to eq("The applicant's propensity score is below average. It is 0.16555 and the desired score is 0.26532. The difference is 0.09977.")
       expect(propensity_rating_summary(desired_propensity_1, score_3)).to eq("The applicant's propensity score is above average. It is 0.46532 and the desired score is 0.26532. The difference is -0.2.")
     end 
