@@ -19,10 +19,14 @@ module CustomerRankings
   end 
 
   def propensity_rating(desired_propensity, score)
-    if desired_propensity == propensity_score(score)
-      p "The applicant's propensity score is average."
-    end
-
+    propensity_score = propensity_score(score)
+    if desired_propensity == propensity_score
+      "The applicant's propensity score is average."
+    elsif desired_propensity < propensity_score
+      "The applicant's propensity score is above average."
+    else 
+      "The applicant's propensity score is below average."  
+    end 
   end 
 
 end
