@@ -46,8 +46,8 @@ module CustomerRankings
     score["ranking"]
   end 
 
-  def ranking_rating(desired_ranking, ranking_score)
-    ranking_score = ranking_score(ranking_score)
+  def ranking_rating(desired_ranking, score)
+    ranking_score = ranking_score(score)
 
     if ranking_score == desired_ranking
       "The applicant's ranking score is average."
