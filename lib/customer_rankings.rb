@@ -10,7 +10,7 @@ module CustomerRankings
     zip_code = zip_code
     age = age 
 
-    response = HTTParty.get("#{url}/customer_scoring?income=#{income}&zipcode=#{zip_code}&age=#{age}")
+    response = HTTParty.get("#{url}?income=#{income}&zipcode=#{zip_code}&age=#{age}")
     response.parsed_response
   end 
 
