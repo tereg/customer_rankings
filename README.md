@@ -4,6 +4,10 @@ A library used to determine if an applicant's propensity and ranking are above a
 
 ## Installation
 
+To install this gem onto your local machine, run `bundle exec rake install` while in the gem directory. 
+
+**To interact with the gem in an application:**
+
 Add this line to your application's Gemfile:
 
 ```
@@ -14,9 +18,16 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
 
-    $ gem install customer_rankings
+Include the module in the files where you will be accessing the methods:
+    
+    include CustomerRankings
+
+**To interact with the gem in a development environment:**
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. 
+
+You can also run `bin/console` for an interactive prompt that will allow you to experiment. Be sure to type ```include CustomerRankings``` in irb in order to make the methods available. 
 
 ## Usage
 
@@ -99,10 +110,9 @@ The return value of the ```get_average_score``` method can be passed to the meth
 
 <!-- ## Development
  -->
-<!-- After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). -->
-
+<!-- To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+ --> 
 <!-- ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/customer_rankings.
